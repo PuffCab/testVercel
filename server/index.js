@@ -93,5 +93,5 @@ const loadRoutes = () => {
   }
   startServer();
 })();
-
+console.log("first");
 export default app;
