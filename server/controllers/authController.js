@@ -15,7 +15,8 @@ export const googleLogin = async (req, res) => {
     const token = generateToken(req.user._id);
     req.session.user = user; // Set the session user data
     req.session.token = token; // Set the session token data
-
+    console.log("req.session.user", req.session.user);
+    console.log("req.session.token", req.session.token);
     //NOTE cookie test with domain to get it to work on vercel
     console.log("CLIENT_URL", process.env.CLIENT_URL);
     res.redirect(`${process.env.CLIENT_URL}`);
